@@ -19,19 +19,23 @@ using namespace std;
       }
     return result;  
     }
-  string decrypt(string result,int shift){
+  string decrypt(string result,int (shift)){
       string reverse = "";
       for(int i=0;i<result.length();i++)
       {
           //for uppercase letters
           if(isupper(result[i]))
           {
-              reverse += char((result[i]-shift-65)%26 + 65);
+              reverse += char((result[i]+shift-65)%26 + 65);
+              if(reverse[i] =='T')
+              {
+                reverse[i] = ' ';
+              }    
           }
           //for lowercase letters
           else
           {
-              reverse += char((result[i]-shift-97)%26 + 97);
+              reverse += char((result[i]+shift-97)%26 + 97);
           }
                   
       }    
@@ -46,7 +50,7 @@ int main(){
     cin>>shift; 
     string result = encrypt(str,shift);
     cout<<"The cipher encrypted is\n"<<result<<endl;
-    cout<<"The original message is\n"<<decrypt(result,shift)<<endl;
+    cout<<"The original message is\n"<<decrypt(result,26-shift)<<endl;
     
 
 }
