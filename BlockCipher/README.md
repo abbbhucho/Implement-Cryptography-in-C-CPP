@@ -1,0 +1,2 @@
+<h4>Block Cipher</h4>
+<pre><p>As per <em>Chakraborty, D. & Rodriguez-Henriquez F<em>, <q>a block cipher encryption algorithm might take a 128-bit block of plaintext as input, and output a corresponding 128-bit block of ciphertext. The exact transformation is controlled using a second input – the secret key. Decryption is similar: the decryption algorithm takes, in this example, a 128-bit block of ciphertext together with the secret key, and yields the original 128-bit block of plain text.</q></p></pre>
